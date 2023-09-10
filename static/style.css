@@ -8,6 +8,7 @@ body {
     position: relative;
     padding-bottom: 200px;
     min-height: 100vh;
+    min-width: 800px;
 }
 
 header{
@@ -19,6 +20,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-width: 800px;
 }
 
 .logo {
@@ -37,13 +39,16 @@ header{
 }
 
 .post{  
+    display: block;
     margin: auto;
     margin-bottom: 80px;
     width: 50%; 
     padding: 15px;
     top: 120px;     
     position: relative;    
-    border: 1px black solid;    
+    border: 5px rgb(88, 90, 235) solid;
+    border-radius: 15px;
+
 }
 
 .title{    
@@ -62,7 +67,8 @@ header{
     margin-right: auto;    
     width: 300px;
     height: 300px;
-    border: 2px black solid;
+    border: 5px rgb(49, 176, 174) solid;
+    border-radius: 30px;
 }
 
 footer {
@@ -77,3 +83,103 @@ footer {
     
 }
 
+.comment-box{   
+    
+    width: 50%; 
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;    
+    border: 6px rgb(66, 185, 203) solid;
+    border-radius: 30px;
+    
+}
+
+.about-container{
+    position: relative;
+    border: 3px rgb(37, 208, 211) solid;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 120px;
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.about-container h2{
+    font-size: 30px;
+    padding: 10px;
+}
+
+.about-container h6{
+    font-size: 24px;
+    padding: 10px;
+}
+
+.about-container p{
+    font-size: 18px;
+    padding: 10px;
+}
+
+#login-form{
+    
+    width: 50%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;    
+    position: relative;    
+    top: 30vh;
+    left: 0vw;    
+    border: 6px rgb(66, 185, 203) solid;
+    border-radius: 5px;
+}
+
+#singup-form{
+    
+    width: 50%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;    
+    position: relative;    
+    top: 30vh;
+    left: 0vw;    
+    border: 6px rgb(66, 185, 203) solid;
+    border-radius: 5px;
+}
+
+#login-form form{
+    width: 50%;
+    padding: 20px;
+    position: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+    padding-top: 50px;
+}
+
+#singup-form form{
+    width: 50%;
+    padding: 20px;
+    position: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 22px;
+    padding-top: 50px;
+}
+
+#submit-btn{
+    margin-top: 20px;
+    width: 80%;
+    padding: 15px;
+}
+
+#login-form h3, h6, input, button {
+    width: 100%;
+    padding: 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mail-error {
+    color: red;
+    font-size: 10px;
+}

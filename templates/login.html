@@ -8,6 +8,7 @@
 </head>
 
 <body>
+    <script src="../static/blog.js"></script>
     
     <header>
         <a class="logo" href="home.html">Postagram</a>
@@ -17,7 +18,19 @@
             <a href="about.html">About</a>
         </nav>
     </header>
- 
 
+    <div id="login-form">
+        <form  novalidate>
+            <h3>LOG IN PAGE:</h3>
+            <h6>Email</h6>
+            <input id="email" type="email">
+            <p id="mail-error" hidden> bad email</p>
+            <h6>Password</h6>
+            <input id="pwd" type="password">
+            <button onclick="validateLogin()" id="submit-btn"> Log in </button>
+        </form>
+    </div>
+ 
+    <footer></footer>
 </body>
 </html>

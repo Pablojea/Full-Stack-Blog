@@ -1,0 +1,102 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    padding-bottom: 200px;
+    min-height: 100vh;
+}
+
+
+header{
+    background-color: rgb(88, 90, 235);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 36px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: antiquewhite;
+}
+.navbar a{
+
+    font-size: 22px;
+    text-decoration: none;
+    color: antiquewhite;
+    margin-left: 25px;
+
+}
+
+
+.post{  
+    display: block;
+    margin: auto;
+    margin-bottom: 80px;
+    width: 50%; 
+    padding: 15px;
+    top: 120px;     
+    position: relative;    
+    border: 5px rgb(88, 90, 235) solid;
+    border-radius: 15px;
+}
+
+.title{    
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.brief{
+    margin-bottom: 10px;
+}
+
+.post-image{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    width: 300px;
+    height: 300px;
+    border: 5px rgb(49, 176, 174) solid;
+    border-radius: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    background-color: rgb(88, 90, 235);
+    width: 100%;
+    height: 80px;
+    bottom: 0px;
+    align-items: center;
+    
+}
+
+.comment-box{
+
+    border: 4px rgb(46, 168, 166) solid;
+    border-radius: 15px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+
+}
+
+.comment-box ul {
+    list-style: none    ;
+}
+
+.comment {
+    padding: 30px;
+}
