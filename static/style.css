@@ -51,10 +51,18 @@ header{
 
 }
 
-.title{    
+.title{
+
     margin-bottom: 20px;
     margin-top: 20px;
+    padding-bottom: 20px;
+    font-size: 36px;
+    text-decoration: none;
+    color: rgb(88, 90, 235);
+    font-weight: bolder;
+    display: block;
 }
+
 
 .brief{
     margin-bottom: 10px;

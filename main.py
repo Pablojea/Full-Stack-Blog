@@ -6,8 +6,8 @@ app = Flask(__name__)
 db = Dbm()
 
 
-@app.route('/')
-@app.route('/home')
+@app.route('/', methods=['GET'])
+@app.route('/home', methods=['GET'])
 def home():
     return render_template('home.html', all_posts=db.get_all_posts())
 
@@ -22,14 +22,14 @@ def singup():
     return render_template('singup.html')
 
 
-@app.route('/about')
+@app.route('/about', methods=['GET'])
 def about():
     return render_template('about.html')
 
 
-@app.route('/post')
-def post():
-    return render_template('post.html')
+@app.route('/post/<int:pid>')
+def post(pid):
+    return render_template('post.html', pid=pid, post_info=db.get_post(pid), comments=db.get_post_comments(pid))
 
 
 @app.route('/user')
@@ -43,5 +43,3 @@ if __name__ == '__main__':
         host='127.0.0.1',
         port=5000
     )
-
-

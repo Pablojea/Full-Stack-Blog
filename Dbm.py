@@ -1,6 +1,7 @@
 import mysql.connector
 import os
 from Post import Post
+from Comment import Comment
 
 
 class Dbm:
@@ -36,3 +37,18 @@ class Dbm:
         for row in self.cursor:
             posts.append(Post(row[0], row[1], row[2], row[3], row[4], row[5]))
         return posts
+
+    def get_post(self, pid):
+        query = 'SELECT * FROM posts WHERE pid = %s'
+        self.cursor.execute(query, (pid,))
+        for row in self.cursor:
+            return Post(row[0], row[1], row[2], row[3], row[4], row[5])
+
+    def get_post_comments(self, pid):
+        query = 'SELECT * FROM comments WHERE pid = %s'
+        self.cursor.execute(query, (pid,))
+        comments = []
+        for row in self.cursor:
+            comments.append(Comment(row[0], row[1], row[2], row[3]))
+
+        return comments

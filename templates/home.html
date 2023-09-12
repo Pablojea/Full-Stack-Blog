@@ -20,52 +20,11 @@
         
     </header>
 
-    <div class="post">
-        <img class="post-image" src="https://assets.entrepreneur.com/content/3x2/2000/20191009140007-GettyImages-1053962188.jpeg" alt="post-image">
-        <h1 class="title">Lorem ipsum dolor sit</h1>
-        <h2 class="brief">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-        <p class="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Molestias dolorum dignissimos iure aliquam provident placeat rerum quia vitae soluta eli
-            gendi, 
-            sit repellat veritatis enim aperiam beatae eum nihil incidunt facilis, inventore, 
-            quis numquam. Distinctio nemo culpa sequi quo pariatur odit accusamus
-            quas iure incidunt molestiae dolore, porro delectus architecto totam!
-        </p>
-    </div>
-
-    <div class="post">
-        <img class="post-image" src="https://assets.entrepreneur.com/content/3x2/2000/20191009140007-GettyImages-1053962188.jpeg" alt="post-image">
-        <h1 class="title">Lorem ipsum dolor sit</h1>
-        <h2 class="brief">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-        <p class="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Molestias dolorum dignissimos iure aliquam provident placeat rerum quia vitae soluta eli
-            gendi, 
-            sit repellat veritatis enim aperiam beatae eum nihil incidunt facilis, inventore, 
-            quis numquam. Distinctio nemo culpa sequi quo pariatur odit accusamus
-            quas iure incidunt molestiae dolore, porro delectus architecto totam!
-        </p>
-    </div>
-
-    <div class="post">
-        <img class="post-image" src="https://assets.entrepreneur.com/content/3x2/2000/20191009140007-GettyImages-1053962188.jpeg" alt="post-image">
-        <h1 class="title">Lorem ipsum dolor sit</h1>
-        <h2 class="brief">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h2>
-        <p class="body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Molestias dolorum dignissimos iure aliquam provident placeat rerum quia vitae soluta eli
-            gendi, 
-            sit repellat veritatis enim aperiam beatae eum nihil incidunt facilis, inventore, 
-            quis numquam. Distinctio nemo culpa sequi quo pariatur odit accusamus
-            quas iure incidunt molestiae dolore, porro delectus architecto totam!
-        </p>
-    </div>
 
     {% for post in all_posts %}
     <div class="post">
-        <img class="post-image" src="https://assets.entrepreneur.com/content/3x2/2000/20191009140007-GettyImages-1053962188.jpeg" alt="post-image">
-        <h1 class="title">{{post.title}}</h1>
+        <img class="post-image" src={{post.image}} alt="post-image">
+        <a class="title" href="post/{{post.pid}}">{{post.title}}</a>
         <h2 class="brief">{{post.brief}}</h2>
         <p class="body">
             {{post.body}}
