@@ -1,5 +1,3 @@
-import traceback
-
 import mysql.connector
 import os
 
@@ -23,9 +21,8 @@ class Dbm:
             self.cursor = self.manager.cursor()
             print('DB manager instance created successfully')
 
-        except Exception as ex:
-            print('failed to connect to database')
-            print(traceback.print_exception())
+        except mysql.connector.Error as err:
+            print('failed to connect to database: '.format(err))
 
     def show_all_tables(self):
         self.cursor.execute('SHOW TABLES')
@@ -38,6 +35,6 @@ class Dbm:
             print(post)
 
 
-myDb = Dbm()
+myDb = Dbm(host='me')
 myDb.show_all_tables()
 myDb.get_all_posts()
