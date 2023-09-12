@@ -62,6 +62,17 @@
         </p>
     </div>
 
+    {% for post in all_posts %}
+    <div class="post">
+        <img class="post-image" src="https://assets.entrepreneur.com/content/3x2/2000/20191009140007-GettyImages-1053962188.jpeg" alt="post-image">
+        <h1 class="title">{{post.title}}</h1>
+        <h2 class="brief">{{post.brief}}</h2>
+        <p class="body">
+            {{post.body}}
+        </p>
+    </div>
+    {% endfor %}
+
     <footer></footer>
 
 </body>

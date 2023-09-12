@@ -1,13 +1,15 @@
 from flask import Flask
 from flask import render_template
+from Dbm import Dbm
 
 app = Flask(__name__)
+db = Dbm()
 
 
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', all_posts=db.get_all_posts())
 
 
 @app.route('/login')
@@ -41,3 +43,5 @@ if __name__ == '__main__':
         host='127.0.0.1',
         port=5000
     )
+
+

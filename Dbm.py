@@ -1,5 +1,6 @@
 import mysql.connector
 import os
+from Post import Post
 
 
 class Dbm:
@@ -31,10 +32,7 @@ class Dbm:
 
     def get_all_posts(self):
         self.cursor.execute('SELECT * FROM posts')
-        for post in self.cursor:
-            print(post)
-
-
-myDb = Dbm(host='me')
-myDb.show_all_tables()
-myDb.get_all_posts()
+        posts = []
+        for row in self.cursor:
+            posts.append(Post(row[0], row[1], row[2], row[3], row[4], row[5]))
+        return posts
