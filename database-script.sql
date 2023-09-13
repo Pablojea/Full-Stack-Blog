@@ -73,3 +73,9 @@ DELETE FROM comments WHERE pid = 2;
 
 SELECT * FROM comments;
 INSERT INTO COMMENTS(pid, uid, body) VALUES(3, 1, 'Nice 1 post !');
+INSERT INTO COMMENTS(pid, uid, body) VALUES(3, 1, 'Nice 2 post !');
+INSERT INTO COMMENTS(pid, uid, body) VALUES(3, 1, 'Nice 3 post !');
+INSERT INTO COMMENTS(pid, uid, body) VALUES(3, 1, 'Nice 4 post !');
+INSERT INTO COMMENTS(pid, uid, body) VALUES(3, 1, 'Nice 5 post !');
+
+COMMIT;

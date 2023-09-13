@@ -1,5 +1,6 @@
 from flask import Flask
 from flask import render_template
+from flask import request
 from Dbm import Dbm
 
 app = Flask(__name__)
@@ -12,9 +13,15 @@ def home():
     return render_template('home.html', all_posts=db.get_all_posts())
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    return render_template('login.html')
+    if request.method == 'GET':
+
+        return render_template('login.html')
+    else:
+        request.form.get('email')
+        request.form.get('pass')
+        return '<h1> Logged </h1>'
 
 
 @app.route('/singup')
@@ -27,9 +34,12 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/post/<int:pid>')
+@app.route('/post/<int:pid>', methods=['GET', 'POST'])
 def post(pid):
-    return render_template('post.html', pid=pid, post_info=db.get_post(pid), comments=db.get_post_comments(pid))
+    return render_template('post.html',
+                           pid=pid,
+                           post_info=db.get_post(pid),
+                           comments=db.get_post_comments(pid))
 
 
 @app.route('/user')

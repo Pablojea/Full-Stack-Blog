@@ -20,14 +20,14 @@
     </header>
 
     <div id="login-form">
-        <form  novalidate>
+        <form id='loginform' name='loginform' action="{{url_for('login')}}"  onsubmit= 'return validateLogin()' method="POST" novalidate>
             <h3>LOG IN PAGE:</h3>
             <h6>Email</h6>
-            <input id="email" type="email">
+            <input id="email" type="email" name="email">
             <p id="mail-error" hidden> bad email</p>
             <h6>Password</h6>
-            <input id="pwd" type="password">
-            <button onclick="validateLogin()" id="submit-btn"> Log in </button>
+            <input id="pwd" type="password" name="pass">
+            <button type='submit' id="submit-btn"> Log in </button>
         </form>
     </div>
  
